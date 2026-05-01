@@ -1,6 +1,5 @@
 package seleniumconcepts;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,7 +12,6 @@ public class BaseTest {
 
     @BeforeClass
     public void configureSelenium() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         options = new ChromeOptions();
         driver.manage().window().maximize();

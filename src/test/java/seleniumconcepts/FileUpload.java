@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.HashMap;
 
 public class FileUpload extends BaseTest {
@@ -36,7 +37,7 @@ public class FileUpload extends BaseTest {
 
         Runtime.getRuntime().exec("C:\\Users\\Keshav\\Documents\\fileupload.exe");
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class*='medium']")));
 
@@ -63,7 +64,3 @@ public class FileUpload extends BaseTest {
     }
 
 }
-
-
-
-

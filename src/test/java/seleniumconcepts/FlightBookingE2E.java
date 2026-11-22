@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 
-public class SpicejetE2E extends BaseTest {
+public class FlightBookingE2E extends BaseTest {
 
     @Test
-    public void spicejetE2E() {
+    public void flightBookingE2E() {
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
         driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_ddl_originStation1_CTXT']")).click();

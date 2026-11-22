@@ -3,10 +3,10 @@ package seleniumconcepts;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class SpicejetDropdown extends BaseTest {
+public class FlightBookingDropdown extends BaseTest {
 
     @Test
-    public void spicejetDropdown() throws InterruptedException {
+    public void flightBookingDropdown() throws InterruptedException {
 
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
         Thread.sleep(3000);

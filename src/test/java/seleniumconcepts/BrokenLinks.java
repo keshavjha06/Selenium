@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.URI;
 import java.util.List;
 
 public class BrokenLinks extends BaseTest {
@@ -35,7 +35,7 @@ public class BrokenLinks extends BaseTest {
 
             String url = link.getAttribute("href");
 
-            HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection conn = (HttpURLConnection) URI.create(url).toURL().openConnection();
 
             conn.setRequestMethod("HEAD");
 

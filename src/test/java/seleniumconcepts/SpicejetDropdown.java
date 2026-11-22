@@ -8,7 +8,7 @@ public class SpicejetDropdown extends BaseTest {
     @Test
     public void spicejetDropdown() throws InterruptedException {
 
-        driver.get("https://www.spicejet.com/");
+        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
         Thread.sleep(3000);
         driver.manage().window().maximize();
 
@@ -33,7 +33,7 @@ public class SpicejetDropdown extends BaseTest {
         //using parent child relationship
         //in xpath we give /  but in css we give space from parent to child
         //driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
-        driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
+        driver.findElement(By.cssSelector(".ui-state-default.ui-state-active")).click();
 
     }
 

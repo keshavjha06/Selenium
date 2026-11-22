@@ -15,7 +15,7 @@ public class ScopeWebdriver extends BaseTest {
         //1. Give me the count of links on the page.
         //2. Count of footer section
 
-        driver.get("http://qaclickacademy.com/practice.php");
+        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
         System.out.println(driver.findElements(By.tagName("a")).size());
 
@@ -24,13 +24,13 @@ public class ScopeWebdriver extends BaseTest {
         System.out.println(footerdriver.findElements(By.tagName("a")).size());
 
         //3-list of all the links in a section
-        WebElement columnDriver = footerdriver.findElement(By.xpath("//table/tbody/tr/td[1]/ul"));
+        WebElement columnDriver = footerdriver.findElement(By.xpath(".//table/tbody/tr/td[1]/ul"));
         System.out.println(columnDriver.findElements(By.tagName("a")).size());
 
         //4- click on each link in the coloumn and check if the pages are opening-
         for (int i = 1; i < columnDriver.findElements(By.tagName("a")).size(); i++) {
 
-            String clickonlinkTab = Keys.chord(Keys.CONTROL, Keys.ENTER);
+            String clickonlinkTab = Keys.chord(System.getProperty("os.name").startsWith("Mac") ? Keys.COMMAND : Keys.CONTROL, Keys.ENTER);
 
             columnDriver.findElements(By.tagName("a")).get(i).sendKeys(clickonlinkTab);
             Thread.sleep(5000L);

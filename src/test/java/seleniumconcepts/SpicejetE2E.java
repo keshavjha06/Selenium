@@ -1,17 +1,19 @@
 package seleniumconcepts;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
+import java.time.Duration;
+
 
 public class SpicejetE2E extends BaseTest {
 
     @Test
     public void spicejetE2E() {
-        driver.get("https://www.spicejet.com/");
+        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
         driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_ddl_originStation1_CTXT']")).click();
 
@@ -25,7 +27,7 @@ public class SpicejetE2E extends BaseTest {
 
         System.out.println(driver.findElement(By.xpath("//*[@id='ctl00_mainContent_ddl_destinationStation1_CTXT']"))
                 .getAttribute("value"));
-        driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
+        driver.findElement(By.cssSelector(".ui-state-default.ui-state-active")).click();
         if (driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5")) {
 
             System.out.println("its disabled");
@@ -39,24 +41,13 @@ public class SpicejetE2E extends BaseTest {
         }
         driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).click();
         driver.findElement(By.id("divpaxinfo")).click();
-        driver.findElement(By.id("ctl00_mainContent_ddl_Adult")).click();
-        driver.findElement(By.id("divpaxinfo")).click();
-
-        List<WebElement> numbers = driver.findElements(By.id("divpaxinfo"));
-        for (WebElement number : numbers) {
-            if (number.getText().equals("5")) {
-                number.click();
-                break;
-            }
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(By.id("hrefIncAdt")));
+        for (int i = 1; i < 5; i++) {
+            driver.findElement(By.id("hrefIncAdt")).click();
         }
-//		for (int i = 1; i < 5; i++) 
-//		{
-//			driver.findElement(By.id("hrefIncAdt")).click();
-//
-//		}
-//		driver.findElement(By.id("btnclosepaxoption")).click();
-//		Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");
-//		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+        driver.findElement(By.id("btnclosepaxoption")).click();
+        Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");
+        System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
         driver.findElement(By.cssSelector("#ctl00_mainContent_btn_FindFlights")).click();
 
     }

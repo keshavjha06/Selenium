@@ -20,7 +20,7 @@ public class Miscellaneous extends BaseTest {
         driver.get("https://www.google.com");
 
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(src, new File("/Users/keshav.jha/IdeaProjects/Selenium/src/test/resources/screenshot.png"));
+        FileUtils.copyFile(src, new File(System.getProperty("user.dir"), "target/screenshots/screenshot.png"));
 
 
     }

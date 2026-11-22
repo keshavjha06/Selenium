@@ -36,7 +36,7 @@ src/test/resources/
 |------|---------|---------------|
 | Basics | `SeleniumDemo`, `Miscellaneous` (cookies, screenshots) | google.com, yahoo.com |
 | Locators | `Locators1`, `Locators2`, `XpathDemo`, `CSSselectors`, `ParentchildXpath`, `RegularExpression` | facebook.com, login.salesforce.com, rediff.com, rahulshettyacademy.com/AutomationPractice |
-| Dropdowns | `SelectDropdown`, `UpdatedDropdown`, `Autosuggestive`, `SpicejetDropdown` | rahulshettyacademy.com/dropdownsPractise (a copy of the old SpiceJet booking form) |
+| Dropdowns | `SelectDropdown`, `UpdatedDropdown`, `Autosuggestive`, `FlightBookingDropdown` | rahulshettyacademy.com/dropdownsPractise (a copy of the old SpiceJet booking form) |
 | Waits & e-commerce | `Ecommerce`, `EcommerceWaits` | rahulshettyacademy.com/seleniumPractise |
 | Alerts & popups | `AlertsDemo`, `WindowPopup` (basic auth) | rahulshettyacademy.com, the-internet.herokuapp.com |
 | Windows & frames | `WindowHandles`, `FramesDemo`, `NestedFrames` | rahulshettyacademy.com, jqueryui.com, the-internet.herokuapp.com |
@@ -46,7 +46,7 @@ src/test/resources/
 | Calendars | `Calendar` | path2usa.com |
 | JavaScript executor | `JavascriptExecutorDemo` | rahulshettyacademy.com |
 | SSL & file upload | `SSLCertifications`, `FileUpload` | expired.badssl.com, the-internet.herokuapp.com/upload |
-| End-to-end flows | `SpicejetE2E`, `CleartripE2E`, `HerokuExercise`, `Exercise12` | rahulshettyacademy.com/dropdownsPractise, cleartrip.com, the-internet.herokuapp.com, rahulshettyacademy.com/AutomationPractice |
+| End-to-end flows | `FlightBookingE2E`, `CleartripE2E`, `HerokuExercise`, `Exercise12` | rahulshettyacademy.com/dropdownsPractise, cleartrip.com, the-internet.herokuapp.com, rahulshettyacademy.com/AutomationPractice |
 
 ## Running the tests
 

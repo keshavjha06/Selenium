@@ -12,9 +12,9 @@ public class Locators1 extends BaseTest {
         //driver.findElement(By.id("email")).sendKeys("Keshav");
         //driver.findElement(By.name("pass")).sendKeys("123456");
         //driver.findElement(By.linkText("Forgotten password?")).click();
-        driver.findElement(By.cssSelector("#email")).sendKeys("keshav");
-        driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("123456");
-        driver.findElement(By.xpath("//button[@value='1']")).click();//button is tagname or can give *
+        driver.findElement(By.cssSelector("input[name='email']")).sendKeys("keshav");
+        driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("123456");
+        driver.findElement(By.xpath("//*[@aria-label='Log in']")).click();//* means any tag
 
 
     }

@@ -12,7 +12,7 @@ public class Exercise12 extends BaseTest {
     public void exercise() {
 
 
-        driver.get("http://qaclickacademy.com/practice.php");
+        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
         driver.findElement(By.xpath("//*[@id='checkbox-example']/fieldset/label[2]/input")).click();
 
@@ -37,6 +37,8 @@ public class Exercise12 extends BaseTest {
         } else
 
             System.out.println("Something wrong with execution");
+
+        driver.switchTo().alert().accept();
 
     }
 

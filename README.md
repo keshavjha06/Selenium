@@ -6,7 +6,7 @@ A collection of Selenium WebDriver practice exercises in Java, one class per con
 
 | Tool | Version |
 |------|---------|
-| Java | 25 |
+| Java | 21 |
 | Selenium Java | 4.53.0 |
 | TestNG | 7.12.0 |
 | Apache Commons IO | 2.22.0 (used for screenshot file copying) |
